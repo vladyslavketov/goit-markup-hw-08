@@ -2,15 +2,15 @@
   border-bottom: 1px solid $header__border-cl;
 }
 
-.page-header__container {
-  display: flex;
-  align-items: center;
-}
+// .page-header__container {
+//   display: flex;
+//   align-items: center;
+// }
 
-.site-nav,
-.site-nav__list {
-  display: flex;
-}
+// .site-nav,
+// .site-nav__list {
+//   display: flex;
+// }
 
 .site-nav__item {
   &:not(:last-child) {

@@ -59,6 +59,23 @@ button:hover {
   }
 }
 
+.title {
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 28px;
+  line-height: (33px / 28px);
+  text-align: center;
+  color: $secondary__cl;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+
+    font-size: 36px;
+    line-height: (42px / 36px);
+  }
+}
+
 .link {
   text-decoration: none;
 }

@@ -4,10 +4,10 @@
   background-color: $footer__bg-cl;
 }
 
-.page-footer__container {
-  display: flex;
-  align-items: baseline;
-}
+// .page-footer__container {
+//   display: flex;
+//   align-items: baseline;
+// }
 
 .page-footer__box {
   &--margin {
@@ -54,11 +54,11 @@
 //   background-color: $footer__socials-bg-cl;
 // }
 
-.footer-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// .footer-form {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
 
 .footer-form__input {
   display: flex;

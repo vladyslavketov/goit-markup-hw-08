@@ -1,8 +1,22 @@
 .filter {
   @include cardSet (8px);
+  align-items: center;
+  margin-bottom: 40px;
 
-  justify-content: center;
-  margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    column-gap: 8px;
+    row-gap: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .filter__btn {
@@ -40,6 +54,14 @@
 
 .projects__item {
   @include cardSet__item();
+
+  @media screen and (min-width: 768px) {
+    @include cardSet__item($items: 2);
+  }
+  
+  @media screen and (min-width: 1200px) {
+    @include cardSet__item($items: 3);
+  }
 }
 
 .projects__link {
@@ -97,13 +119,13 @@
 
   font-weight: 700;
   font-size: 18px;
-  line-height: 2;
+  line-height: (36px / 18px);
   letter-spacing: 0.06em;
   color: $secondary__cl;
 }
 
 .projects__tag {
   font-size: 16px;
-  line-height: 1.88;
+  line-height: (30px / 16px);
   color: $main__cl;
 }

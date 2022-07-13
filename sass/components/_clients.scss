@@ -1,21 +1,18 @@
-.clients__title {
-  margin-bottom: 50px;
-
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.67;
-  text-align: center;
-  color: $secondary__cl;
-}
-
 .clients__list {
   @include cardSet ();
 }
 
 .clients__item {
-  @include cardSet__item ($items: 6);
-  width: 170px;
+  @include cardSet__item ($items: 2);
   height: 92px;
+
+  @media screen and (min-width:768px) {
+    @include cardSet__item($items: 3);
+  }
+  
+  @media screen and (min-width:1200px) {
+    @include cardSet__item($items: 6);
+  }
 }
 
 .clients__link {
