@@ -1,0 +1,46 @@
+.clients__title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.67;
+  text-align: center;
+  color: $secondary__cl;
+}
+
+.clients__list {
+  @include cardSet ();
+}
+
+.clients__item {
+  @include cardSet__item ($items: 6);
+  width: 170px;
+  height: 92px;
+}
+
+.clients__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  color: $clients__icon-cl;
+
+  border: 1px solid $clients__icon-cl;
+  border-radius: 4px;
+  transition: color $main__transition,
+    border $main__transition;
+
+
+  &:hover,
+  &:focus {
+    color: $accent__cl;
+
+    border: 1px solid $accent__cl;
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}

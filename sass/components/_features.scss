@@ -1,0 +1,34 @@
+.features__list {
+  display: flex;
+}
+
+.features__item {
+  flex-basis: calc((100% - 90px) / 4);
+  max-width: 270px;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.features__icon-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+
+  background: $features__bg-cl;
+  border-radius: 4px;
+}
+
+.features__name {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $secondary__cl;
+}

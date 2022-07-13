@@ -1,0 +1,85 @@
+/* fonts */
+$main__font: "roboto";
+$secondary__font: "raleway";
+
+/* color */
+$main__cl: #757575;
+$main__bg-cl: #ffffff;
+$secondary__cl:#212121;
+$accent__cl: #2196F3;
+$btn__text-cl: #ffffff;
+
+/* transition */
+$main__transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+/* лого (start) */
+$logo__dark: #000000;
+$logo__light: #ffffff;
+/* лого (end) */
+
+
+/* блок header (start) */
+$header__border-cl: #ECECEC;
+/* блок header (end) */
+
+/* блок footer (start) */
+$footer__bg-cl: #2F303A;
+$footer__title-cl: #ffffff;
+$footer-contacts__link-cl: rgba(255, 255, 255, 0.6);
+$footer-contacts__location-cl: #ffffff;
+$footer__socials-cl: #ffffff;
+$footer__socials-bg-cl: rgba(255, 255, 255, 0.1);
+$footer__input-cl: rgba(255, 255, 255, 0.6);
+$footer__input-border-cl: rgba(255, 255, 255, 0.3);
+$footer__input-dsh-cl: rgba(0, 0, 0, 0.15);
+$footer__input-bsh-cl: rgba(0, 0, 0, 0.15);
+/* блок footer (end) */
+
+/* блок hero (start) */
+$hero__bg-cl: #2F303A;
+$hero--overlay-bg-cl: #C4C4C4;
+$hero__overlay-cl: rgba(47, 48, 58, 0.4);
+$hero__title-cl: #ffffff;
+
+$hero__btn-cl: #188CE8;
+$hero__btn-dsh-cl: rgba(0, 0, 0, 0.15);
+/* блок hero (end) */
+
+/* блок features (start) */
+$features__bg-cl: #F5F4FA;
+/* блок features (end) */
+
+/* блок direction (start) */
+$direction__desc-cl: #ffffff;
+$direction-overlay-cl: rgba(47, 48, 58, 0.8);
+/* блок direction (end) */
+
+/* блок team (start) */
+$team__bg-cl: #F5F4FA;
+$team__item-bg-cl: #ffffff;
+$team__item-bsh1-cl: rgba(0, 0, 0, 0.12);
+$team__item-bsh2-cl: rgba(0, 0, 0, 0.14);
+$team__item-bsh3-cl: rgba(0, 0, 0, 0.2);
+$team__socials-cl: #AFB1B8;
+/* блок team (end) */
+
+/* блок clients (start) */
+$clients__icon-cl: #AFB1B8;
+/* блок clients (end) */
+
+/* блок modal (start) */
+$backdrop-bgc: rgba(0, 0, 0, 0.2);
+$modal__dark-cl: #000000;
+$modal__close-btn-boreder-cl: rgba(0, 0, 0, 0.1);
+$modal-form-border-cl: rgba(33, 33, 33, 0.2);
+$modal-form-placeholder-cl: rgba(117, 117, 117, 0.5);
+$modal-checkbox-bsh: rgba(0, 0, 0, 0.25);
+$modal__btn-dsh: rgba(0, 0, 0, 0.15);
+$modal__btn-cl: #188CE8;
+/* блок modal (end) */
+
+/* блок portfolio (start) */
+$portfolio-filter__bg-cl: #F5F4FA;
+$project__overlay-cl: rgba(33, 150, 243, 0.9);
+$project__item-cl: #EEEEEE;
+/* блок portfolio (end) */

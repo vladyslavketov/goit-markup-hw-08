@@ -1,0 +1,30 @@
+/* логотип */
+.logo {
+  display: block;
+  font-family: $secondary__font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+
+  transition: color $main__transition;
+
+  &:hover,
+  &:focus,
+  &--accent {
+    color: $accent__cl;
+  }
+}
+
+.page-header__logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+
+  color: $logo__dark;
+}
+
+.page-footer__logo {
+  margin-bottom: 20px;
+
+  color: $logo__light;
+}

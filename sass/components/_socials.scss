@@ -1,0 +1,45 @@
+.socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 206px;
+  height: 44px;
+} 
+
+.socials__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50px;
+  transition: color $main__transition,
+    background-color $main__transition;
+
+  &:hover,
+  &:focus {
+    color: $main__bg-cl;
+  
+    background-color: $accent__cl;
+  }
+}
+
+.socials__icon {
+  fill: currentColor;
+}
+
+.team__socials-link {
+  color: $team__socials-cl;
+}
+
+.footer__socials-link {
+  color: $footer__socials-cl;
+  background-color: $footer__socials-bg-cl;
+}

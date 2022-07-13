@@ -1,0 +1,54 @@
+.team {
+  background-color: $team__bg-cl;
+}
+
+.team__title {
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.67;
+  text-align: center;
+  color: $secondary__cl;
+}
+
+.team__list {
+  @include cardSet();
+}
+
+.team__item {
+  @include cardSet__item($items: 4);
+
+  background: $team__item-bg-cl;
+  box-shadow: 0px 1px 3px $team__item-bsh1-cl,
+    0px 1px 1px $team__item-bsh2-cl,
+    0px 2px 1px $team__item-bsh3-cl;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team__box {
+  padding: 30px 32px;
+}
+
+.team__name,
+.team__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.team__name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  color: $secondary__cl;
+}
+
+.team__text {
+  margin-bottom: 16px;
+}
+
+// .team__socials-link {
+//   color: $team__socials-cl;
+// }

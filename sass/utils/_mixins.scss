@@ -1,0 +1,9 @@
+@mixin cardSet($cardSet__gap: 30px) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $cardSet__gap;
+}
+
+@mixin cardSet__item ($cardSet__gap: 30px, $items: 3) {
+  flex-basis: calc((100% - #{$cardSet__gap} * (#{$items} - 1)) / #{$items});
+}

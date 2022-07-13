@@ -1,0 +1,58 @@
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-color: $hero__bg-cl;
+}
+
+.hero--overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: $hero--overlay-bg-cl;
+  background-image: linear-gradient($hero__overlay-cl, $hero__overlay-cl),
+    url('../images/hero-bg-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero__title {
+  max-width: 696px;
+  margin: 0px auto;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $hero__title-cl;
+}
+
+.hero__btn {
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 32px;
+
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: $btn__text-cl;
+
+  background-color: $accent__cl;
+  box-shadow: 0px 4px 4px $hero__btn-dsh-cl;
+  border-radius: 4px;
+  border-width: 0px;
+  transition: background-color $main__transition;
+
+  &:hover,
+  &:focus {
+    background-color: $hero__btn-cl;
+  }
+}

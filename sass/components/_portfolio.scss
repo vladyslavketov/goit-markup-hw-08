@@ -1,0 +1,109 @@
+.filter {
+  @include cardSet (8px);
+
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter__btn {
+  padding: 6px 22px;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  color: $secondary__cl;
+
+  background-color: $portfolio-filter__bg-cl;
+  border-radius: 4px;
+  border-width: 0;
+  transition: color $main__transition,
+    background-color $main__transition,
+    box-shadow $main__transition;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $main__bg-cl;
+  
+    background-color: $accent__cl;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+      0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.projects {
+  @include cardSet();
+}
+
+.projects__item {
+  @include cardSet__item();
+}
+
+.projects__link {
+  display: block;
+
+  transition: box-shadow $main__transition;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+      0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.projects__img-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.projects__desc {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.56;
+  color: $main__bg-cl;
+
+  background-color: $project__overlay-cl;
+  transform: translateY(100%);
+  transition: transform $main__transition;
+
+  .projects__link:hover & {
+    transform: translateY(0);
+  }
+}
+
+.projects__box {
+  padding: 20px 24px;
+
+  border: 1px solid $project__item-cl;
+  border-top: none;
+}
+
+.projects__title {
+  margin-bottom: 4px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $secondary__cl;
+}
+
+.projects__tag {
+  font-size: 16px;
+  line-height: 1.88;
+  color: $main__cl;
+}
