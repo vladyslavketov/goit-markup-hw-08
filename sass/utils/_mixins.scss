@@ -7,3 +7,4 @@
 @mixin cardSet__item ($cardSet__gap: 30px, $items: 3) {
   flex-basis: calc((100% - #{$cardSet__gap} * (#{$items} - 1)) / #{$items});
 }
+ 
