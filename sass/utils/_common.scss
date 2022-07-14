@@ -7,6 +7,10 @@ body {
   background-color: $main__bg-cl;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,

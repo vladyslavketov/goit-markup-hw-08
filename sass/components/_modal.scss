@@ -5,26 +5,44 @@
 
   width: 100%;
   height: 100%;
-
+  
   background-color: $backdrop-bgc;
   transition: transform $main__transition,
     opacity $main__transition,
     visibility $main__transition;
   opacity: 1;
+  overflow-y: scroll;
+
+  @media screen and (max-width: 767px) {
+    padding: 93px 15px;
+  }
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-
-  width: 528px;
-  height: 581px;
-
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: $main__bg-cl;
 
-  transform: translate(-50%, -50%) scaleX(1);
+  transform: scaleX(1);
   transition: transform $main__transition;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+    height: 609px;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .backdrop.is-hidden {
@@ -77,9 +95,13 @@
 
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: (30px / 20px);
   text-align: center;
   color: $secondary__cl;
+
+  @media screen and (min-width: 1200px) {
+    line-height: (23px / 20px);
+  }
 }
 
 .modal-form__field {
@@ -98,12 +120,12 @@
   margin-bottom: 4px;
 
   font-size: 12px;
-  line-height: 1.167;
+  line-height: (14px / 12px);
   letter-spacing: 0.01em;
 }
 
 .modal-form__input {
-  width: 448px;
+  width: 100%;
   height: 40px;
   padding: 0 0 0 42px;
 
@@ -131,7 +153,7 @@
 
 .modal-form__textarea {
   display: block;
-  width: 448px;
+  width: 100%;
   height: 120px;
   padding: 12px 16px;
   resize: none;
@@ -146,7 +168,7 @@
 
   &::placeholder {
     font-size: 12px;
-    line-height: 1.167;
+    line-height: (14px / 12px);
     letter-spacing: 0.01em;
     color: $modal-form-placeholder-cl;
   }
@@ -156,6 +178,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.modal-policy__lable {
+  font-size: 12px;
+  line-height: (14px / 12px);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: (24px / 14px);
+  }
 }
 
 .modal-policy__link {
@@ -173,19 +205,18 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-  margin-right: 7px;
+  margin-right: 8px;
+  
+  @media screen and (min-width: 1200px) {
+    margin-right: 7px;
+  }
 }
-
-// .modal-policy__checkbox:checked + .modal-policy__icon {
-//   background-color: $accent__cl;
-//   border: 1px solid $accent__cl;
-//   box-shadow: none;
-// }
 
 .modal-policy__icon {
   order: -1;
 
-  margin-right: 7px;
+  min-width: 16px;
+  margin-right: 8px;
 
   border: 1px solid $modal__dark-cl;
   border-radius: 2px;
@@ -196,6 +227,10 @@
     border: 1px solid $accent__cl;
     box-shadow: none;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 7px;
+  }
 }
 
 .modal__submit-btn {
@@ -204,7 +239,7 @@
 
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
+  line-height: (30px / 16px);
   letter-spacing: 0.06em;
   color: $main__bg-cl;
 
