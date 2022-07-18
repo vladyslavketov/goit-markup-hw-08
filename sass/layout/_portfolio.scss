@@ -82,6 +82,10 @@
   overflow: hidden;
 }
 
+.projects__img {
+  width: 100%;
+}
+
 .projects__desc {
   position: absolute;
   top: 0;
@@ -99,7 +103,7 @@
   color: $main__bg-cl;
 
   background-color: $project__overlay-cl;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform $main__transition;
 
   .projects__link:hover & {

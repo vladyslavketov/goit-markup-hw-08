@@ -1,14 +1,18 @@
 @import "./utils/variables";
-@import "./utils/common";
 @import "./utils/mixins";
+
+@import "./base/common";
+@import "./base/reset";
+
 @import "./components/logo";
 @import "./components/socials";
-@import "./components/page-header";
-@import "./components/hero";
-@import "./components/features";
-@import "./components/direction";
-@import "./components/team";
-@import "./components/clients";
-@import "./components/page-footer";
-@import "./components/modal";
-@import "./components/portfolio";
+
+@import "./layout/page-header";
+@import "./layout/hero";
+@import "./layout/features";
+@import "./layout/direction";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/page-footer";
+@import "./layout/modal";
+@import "./layout/portfolio";

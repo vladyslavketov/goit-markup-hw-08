@@ -11,18 +11,6 @@ body.modal-open {
   overflow: hidden;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -45,6 +33,7 @@ button:hover {
 }
 
 .container {
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -78,14 +67,6 @@ button:hover {
     font-size: 36px;
     line-height: (42px / 36px);
   }
-}
-
-.link {
-  text-decoration: none;
-}
-
-.list {
-  list-style: none;
 }
 
 .visually-hidden {
