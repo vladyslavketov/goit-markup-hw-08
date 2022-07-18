@@ -15,10 +15,6 @@
 .menu-container {
   background-color: $main__bg-cl;
 
-  &.is-open {
-    display: block;
-  }
-
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
@@ -28,6 +24,10 @@
 
     width: 100%;
     padding: 48px 40px;
+
+    &.is-open {
+      display: block;
+    }
   }
 
   @media screen and (min-width: 768px) {
@@ -45,7 +45,7 @@
 }
 
 .menu-btn {
-  display: inline-flex;
+  display: flex;
   margin: 0;
   padding: 0;
   border: 0;
@@ -61,6 +61,11 @@
     display: block;
   }
 
+  &.is-open:hover .icon-cross,
+  &.is-open:focus .icon-cross {
+    fill: $accent__cl;
+  }
+
   &.is-open .icon-menu {
     display: none;
   }
@@ -71,6 +76,10 @@
 }
 
 .site-nav__list {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 306px;
+  }
+
   @media screen and (min-width: 768px) {
     display: flex;
   }
@@ -131,6 +140,11 @@
 }
 
 .header-contacts {
+  @media screen and (max-width: 767px) {
+   display: flex;
+   flex-direction: column-reverse;
+  }
+
   @media screen and (min-width: 1200px) {
     display: flex;
   }
@@ -138,7 +152,7 @@
 
 .header-contacts__item {
   @media screen and (max-width: 767px) {
-    &:not(:last-child) {
+    &:not(:first-child) {
       margin-bottom: 32px;
     }
   } 
@@ -168,6 +182,14 @@
   &:hover,
   &:focus {
     color: $accent__cl;
+  }
+
+  @media screen and (max-width: 767px) {
+    &--bigger {
+      font-size: 34px;
+      line-height: (40px / 34px);
+      color: $accent__cl;
+    }
   }
 
   @media screen and (min-width: 768px) {

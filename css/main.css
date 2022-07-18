@@ -229,9 +229,6 @@ button:hover {
 .menu-container {
   background-color: #ffffff;
 }
-.menu-container.is-open {
-  display: block;
-}
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
@@ -241,6 +238,9 @@ button:hover {
     z-index: 2;
     width: 100%;
     padding: 48px 40px;
+  }
+  .menu-container.is-open {
+    display: block;
   }
 }
 @media screen and (min-width: 768px) {
@@ -267,9 +267,9 @@ button:hover {
 }
 
 .menu-btn {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
   padding: 0;
   border: 0;
@@ -282,6 +282,9 @@ button:hover {
 .menu-btn.is-open .icon-cross {
   display: block;
 }
+.menu-btn.is-open:hover .icon-cross, .menu-btn.is-open:focus .icon-cross {
+  fill: #2196F3;
+}
 .menu-btn.is-open .icon-menu {
   display: none;
 }
@@ -291,6 +294,11 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .site-nav__list {
+    margin-bottom: 306px;
+  }
+}
 @media screen and (min-width: 768px) {
   .site-nav__list {
     display: -webkit-box;
@@ -343,6 +351,17 @@ button:hover {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .header-contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header-contacts {
     display: -webkit-box;
@@ -352,7 +371,7 @@ button:hover {
 }
 
 @media screen and (max-width: 767px) {
-  .header-contacts__item:not(:last-child) {
+  .header-contacts__item:not(:first-child) {
     margin-bottom: 32px;
   }
 }
@@ -378,6 +397,13 @@ button:hover {
 }
 .header-contacts__link:hover, .header-contacts__link:focus {
   color: #2196F3;
+}
+@media screen and (max-width: 767px) {
+  .header-contacts__link--bigger {
+    font-size: 34px;
+    line-height: 1.1764705882;
+    color: #2196F3;
+  }
 }
 @media screen and (min-width: 768px) {
   .header-contacts__link {
@@ -793,7 +819,7 @@ button:hover {
 }
 
 .page-footer__title {
-  display: inline-block;
+  display: block;
   margin-bottom: 20px;
   font-weight: 700;
   line-height: 1.1428571429;
