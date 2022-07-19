@@ -1,44 +1,90 @@
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
 
   background-color: $hero__bg-cl;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero--overlay {
-  max-width: 1600px;
-  height: 600px;
+  max-width: 480px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
 
   background-color: $hero--overlay-bg-cl;
   background-image: linear-gradient($hero__overlay-cl, $hero__overlay-cl),
-    url('../images/hero/hero-bg-img.jpg');
+    url('../images/hero/hero-480.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
   @media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+    & {
+      background-image: linear-gradient($hero__overlay-cl, $hero__overlay-cl),
+        url('../images/hero/hero-960.jpg');
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    height: 400px;
+
+    background-image: linear-gradient($hero__overlay-cl, $hero__overlay-cl),
+    url('../images/hero/hero-768.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
       & {
-        background-image: linear-gradient($hero__overlay-cl, $hero__overlay-cl), 
-          url('../images/hero/hero-bg-img-2x.jpg');
+        background-image: linear-gradient($hero__overlay-cl, $hero__overlay-cl),
+          url('../images/hero/hero-1536.jpg');
       }
     }
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    height: 600px;
+
+    background-image: linear-gradient($hero__overlay-cl, $hero__overlay-cl),
+    url('../images/hero/hero-1200.jpg');
+
+    @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+      & {
+        background-image: linear-gradient($hero__overlay-cl, $hero__overlay-cl),
+          url('../images/hero/hero-3200.jpg');
+      }
+    }
+  }  
 }
 
 .hero__title {
-  max-width: 696px;
+  max-width: 360px;
   margin: 0px auto;
 
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: (42px / 26px);
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: $hero__title-cl;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 696px;
+
+    font-size: 44px;
+    line-height: (60px / 44px);
+  }
 }
 
 .hero__btn {
