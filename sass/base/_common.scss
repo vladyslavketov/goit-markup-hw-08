@@ -7,7 +7,8 @@ body {
   background-color: $main__bg-cl;
 }
 
-body.modal-open {
+body.modal-open,
+body.menu-container-open {
   overflow: hidden;
 }
 
