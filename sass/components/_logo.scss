@@ -3,8 +3,8 @@
   display: block;
   font-family: $secondary__font;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: (28px / 24px);
 
   transition: color $main__transition;
 
@@ -16,11 +16,20 @@
 }
 
 .page-header__logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  // margin-right: 93px;
+  padding: 16px 0;
 
   color: $logo__dark;
+
+  @media screen and (min-width: 768px) {
+    padding: 26px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 24px 0 25px;
+
+    font-size: 26px;
+    line-height: (31px / 26px);
+  }
 }
 
 .page-footer__logo {

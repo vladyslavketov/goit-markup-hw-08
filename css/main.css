@@ -135,8 +135,8 @@ ul {
   display: block;
   font-family: "raleway";
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.1666666667;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -145,9 +145,20 @@ ul {
 }
 
 .page-header__logo {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding: 16px 0;
   color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .page-header__logo {
+    padding: 26px 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .page-header__logo {
+    padding: 24px 0 25px;
+    font-size: 26px;
+    line-height: 1.1923076923;
+  }
 }
 
 .page-footer__logo {
@@ -233,15 +244,21 @@ ul {
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
+  }
+  .menu-container.is-open {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     padding: 48px 40px;
-  }
-  .menu-container.is-open {
-    display: block;
   }
 }
 @media screen and (min-width: 768px) {
@@ -272,7 +289,7 @@ ul {
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  padding: 0;
+  padding: 10px 0;
   border: 0;
   background-color: transparent;
   z-index: 3;
@@ -356,7 +373,7 @@ ul {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    margin-top: 302px;
+    margin-top: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -521,8 +538,8 @@ ul {
   .hero--overlay {
     max-width: 1600px;
     height: 600px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-1200.jpg");
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-1200.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../images/hero/hero-1600.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero/hero-1600.jpg");
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
@@ -1332,7 +1349,14 @@ ul {
 }
 
 .projects__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1385,6 +1409,9 @@ ul {
 }
 
 .projects__box {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid #EEEEEE;
   border-top: none;
